@@ -9,6 +9,9 @@ spring:
           uri: http://localhost:8000
           predicates:
             - Path=/books/**
+      default-filters:
+        - TokenRelay
+        - SaveSession
   security:
     oauth2:
       client:
@@ -16,7 +19,7 @@ spring:
           keycloak:
             client-id: edge-service
             client-secret: polar-keycloak-secret
-            scopes: openid
+            scope: openid
         provider:
           keycloak:
             issuer-uri: http://localhost:8080/auth/realms/PolarBookshop
