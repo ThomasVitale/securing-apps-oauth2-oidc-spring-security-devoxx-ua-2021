@@ -1,0 +1,11 @@
+server:
+  port: 9000
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: book-route
+          uri: http://localhost:8000
+          predicates:
+            - Path=/books/**

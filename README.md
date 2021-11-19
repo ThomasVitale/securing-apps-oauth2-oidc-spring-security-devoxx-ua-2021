@@ -1,1 +1,1 @@
-# securing-apps-oauth2-oidc-spring-security-devoxx-ua-2021
+# Securing applications with OAuth2 and OIDC using Spring Security (Devoxx Ukraine 2021)
