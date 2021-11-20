@@ -18,9 +18,11 @@ public class EdgeServiceApplication {
 @RestController
 class WelcomeController {
 
+    record Welcome(String message){}
+
     @GetMapping("welcome")
-    Mono<String> getWelcome() {
-        return Mono.just("Welcome to Polar Bookshop!");
+    Mono<Welcome> getWelcome() {
+        return Mono.just(new Welcome("Welcome to Polar Bookshop!"));
     }
 
 }
